@@ -1,0 +1,11 @@
+USER MANUAL
+
+
+	1.	As introduced, there will be a kernel module and user program for the code. The kernel module is in the folder called “kernel”. To make the kernel module as execution file, just type “make” in the terminal when you’re in the folder as there is a makeFile being provided. Then, do “sudo insmod create_proc.ko” will install the kernel module to the system. 
+	2.	go back to the parent-folder, and type “make” to make the executable files for “load.c” and “spyGame.c”. 
+	3.	Load the game by typing “./load” in one of the terminal (not all the terminal!), and input the number of players. Here, we require the number to be between 3 and 5 (inclusive). 
+	4.	In each terminal (each terminal represents a player), type “./spyGame” to start the game.  
+	5.	A word will be assigned to each player. 
+	6.	Then, after all the players get a word, each player will be prompted to input a brief description of their word one by one. The description of others’ will be shown on every player’s terminal along with their player ID. 
+	7.	Now, it’s voting time. Give a playerID vote him out! 
+	8.	The player who gets the most votes will be out. (Assume no ties.) The game will be determined to be continued or not. If not, give the result to each player. (“Congratulation for your win”/ “You lose”) 
