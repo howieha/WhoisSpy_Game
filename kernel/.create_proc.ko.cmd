@@ -1,0 +1,1 @@
+cmd_/home/howieha/Desktop/project/kernel/create_proc.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/howieha/Desktop/project/kernel/create_proc.ko /home/howieha/Desktop/project/kernel/create_proc.o /home/howieha/Desktop/project/kernel/create_proc.mod.o ;  true
