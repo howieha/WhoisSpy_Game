@@ -4,6 +4,102 @@
 #include "headers.h"
 #include <semaphore.h>
 
+void drawSpyInit(){
+	for (int i = 0;i<90;i++){
+		printf("-");
+	}
+	printf("\n");
+	for (int i = 0;i<90;i++){
+		printf("-");
+	}	
+	for (int i = 0;i<3;i++){
+		printf("\n");	
+	}
+	
+	for (int i = 0;i<=20;i++){
+		if(i==0){
+			printf("     ");
+			for(int j = 0;j<20;j++){
+				printf("-");			
+			}
+			printf("     ");
+			for(int j = 0;j<20;j++){
+				printf("-");			
+			}
+			printf("     ");
+			printf("-");
+			printf("                  ");
+			printf("-");
+			printf("     \n");       
+	
+		}
+		else if(i<10){
+			printf("     ");
+			printf("|");
+			printf("                        ");
+			printf("|");
+			printf("                  ");
+			printf("|");
+			for(int j = 0;j<(5+i);j++){
+				printf(" ");			
+			}		
+			printf("-");
+			for(int j = 0;j<(9-i)*2;j++){
+				printf(" ");			
+			}		
+			printf("-");
+			for(int j = 0;j<(5+i-1);j++){
+				printf(" ");			
+			}
+			printf("\n");
+		}	
+		else if(i==10){
+			printf("     ");
+			for(int j = 0;j<20;j++){
+				printf("-");			
+			}
+			printf("     ");
+			for(int j = 0;j<20;j++){
+				printf("-");			
+			}
+			printf("               ");
+			printf("|");
+			printf("              \n");
+		}
+		else if(i<20){
+			printf("                        ");
+			printf("|");
+			printf("     ");
+			printf("|");
+			printf("                                  ");
+			printf("|");
+			printf("              \n");
+		}
+		else{
+			printf("     ");
+			for(int j = 0;j<20;j++){
+				printf("-");			
+			}
+			printf("     ");
+			printf("|");
+			printf("                                  ");
+			printf("|");
+			printf("              \n");		
+		}
+	}	
+	
+	printf("\n");
+	for (int i = 0;i<90;i++){
+		printf("-");
+	}
+	printf("\n");
+	for (int i = 0;i<90;i++){
+		printf("-");
+	}	
+	printf("\n");
+
+}
+
 
 int main(){
 
@@ -12,7 +108,7 @@ int main(){
 	int num = 0,size;
 	sem_t *mutex = sem_open(SNAME,O_CREAT,0666,1);
 	
-
+	drawSpyInit();
 	printf("How many players in total(>= 3 && <= 5): ");
 	scanf("%d",&num);
 	
@@ -53,3 +149,5 @@ int main(){
 
 	return 0;
 }
+
+
